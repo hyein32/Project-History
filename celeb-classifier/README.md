@@ -30,6 +30,12 @@ mltest_files/
 ```
 
 ## 실행 방법
+### 웹에서 바로 사용
+별도 설치 없이 아래 주소에서 바로 사용할 수 있습니다.
+
+https://hyein32.github.io/Project-History/celeb-classifier/
+
+### 내 컴퓨터에서 실행
 모델 파일을 불러오기 때문에 `index.html`을 바로 열지 말고 간단한 웹 서버로 실행해야 합니다.
 
 ```bash
