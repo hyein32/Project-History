@@ -1,0 +1,9 @@
+{
+  "title": "사진(연예인) 분류 머신러닝 서비스",
+  "summary": "사진을 올리면 조유리·최예나·김채원 중 가장 닮은 사람을 알려주는 웹 서비스",
+  "grade": "2학년",
+  "course": "머신러닝프로젝트",
+  "semester": "2026-2학기",
+  "tech": ["Teachable Machine", "TensorFlow.js", "HTML/CSS/JS"],
+  "demo": "https://hyein32.github.io/Project-History/celeb-classifier/"
+}
