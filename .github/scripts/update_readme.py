@@ -20,14 +20,14 @@ rows.sort(key=lambda r: (r[1].get("semester", ""), r[0]), reverse=True)
 def cell(v):
     return str(v).replace("|", "\\|").replace("\n", " ") if v else "-"
 
-lines = ["| 프로젝트 | 설명 | 학년 | 수업 | 학기 | 기술 | 링크 |", "|---|---|---|---|---|---|---|"]
+lines = ["| 폴더 | 프로젝트 | 설명 | 학년 | 수업 | 학기 | 기술 | 링크 |", "|---|---|---|---|---|---|---|---|"]
 for folder, d in rows:
     tech = ", ".join(d.get("tech", [])) if isinstance(d.get("tech"), list) else d.get("tech")
     links = [f"[코드](./{folder.replace(' ', '%20')}/)"]
     if d.get("demo"):
         links.insert(0, f"[데모]({d['demo']})")
     lines.append("| " + " | ".join([
-        cell(d["title"]), cell(d.get("summary")), cell(d.get("grade")),
+        f"`{folder}`", cell(d["title"]), cell(d.get("summary")), cell(d.get("grade")),
         cell(d.get("course")), cell(d.get("semester")), cell(tech), " · ".join(links),
     ]) + " |")
 table = "\n".join(lines)
